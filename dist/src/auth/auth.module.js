@@ -12,8 +12,6 @@ const login_controller_1 = require("./controllers/login.controller");
 const login_service_1 = require("./services/login.service");
 const jwt_1 = require("@nestjs/jwt");
 const prisma_service_1 = require("../database/prisma.service");
-const seed_service_1 = require("./services/seed.service");
-const seed_controller_1 = require("./controllers/seed.controller");
 const config_1 = require("@nestjs/config");
 const jwt_strategy_1 = require("./strategies/jwt.strategy");
 let AuthModule = class AuthModule {
@@ -41,8 +39,8 @@ exports.AuthModule = AuthModule = __decorate([
                 }
             })
         ],
-        controllers: [login_controller_1.LoginController, seed_controller_1.SeedController],
-        providers: [login_service_1.LoginService, prisma_service_1.PrismaService, seed_service_1.SeedService, jwt_strategy_1.JwtStrategy]
+        controllers: [login_controller_1.LoginController],
+        providers: [login_service_1.LoginService, prisma_service_1.PrismaService, jwt_strategy_1.JwtStrategy]
     })
 ], AuthModule);
 //# sourceMappingURL=auth.module.js.map
